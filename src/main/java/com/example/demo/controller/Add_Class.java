@@ -6,9 +6,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:5173")
-public class Add_Class {
-
+@CrossOrigin(originPatterns = {"http://localhost:5173", "https://*.vercel.app"})public class Add_Class {
 	@GetMapping("/add")
 	public int add(@RequestParam int a, @RequestParam int b)
 	{
